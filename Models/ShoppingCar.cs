@@ -3,18 +3,22 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BookStore.Models
 {
-    public class Commentary
+    public class ShoppingCar  
     {
+        public long Id { get; set; }
         [ForeignKey("Book")]
         public long IdBook { get; set; }
-        public string Description { get; set; }
+        public int Count { get; set; }
 
+        public double Price { get; set; }
         [ForeignKey("User")]
-        public long IDUsuario { get; set; }
-        public DateTime DateCommentary { get; set; }
+    
+
         public Book Book {get;set;}
 
-        public User User {get;set;}
+         public User User {get;set;}
 
-    }
+ 
+       
+           }
 }
