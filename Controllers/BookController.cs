@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookStore.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.Controllers
@@ -12,16 +13,59 @@ namespace BookStore.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<Book>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new Book[] {
+            new Book(){
+                Id=1,
+                Title = "Livro 1",
+                Genre = "Fiction",
+                DatePublish = DateTime.Now.AddYears(-9),
+                Count = 10,
+                Price = 20.35
+            },
+            new Book(){
+                Id=2,
+                Title = "Livro 2",
+                Genre = "Computing",
+                DatePublish = DateTime.Now.AddYears(-2),
+                Count = 35,
+                Price = 49.99
+            }};
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<Book> Get(int id)
         {
-            return "value";
+            if( id.Equals(1))
+            {
+             return new Book(){
+                Id=1,
+                Title = "Livro 1",
+                Genre = "Fiction",
+                DatePublish = DateTime.Now.AddYears(-9),
+                Count = 10,
+                Price = 20.35
+             };
+            }
+            else
+            if(id.Equals(2))
+            {
+               return  new Book(){
+                Id=2,
+                Title = "Livro 2",
+                Genre = "Computing",
+                DatePublish = DateTime.Now.AddYears(-2),
+                Count = 35,
+                Price = 49.99
+             };     
+
+            }
+            else
+            {
+                return null;
+            }
         }
 
         // POST api/values
