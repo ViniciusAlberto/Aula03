@@ -9,7 +9,7 @@ namespace BookStore.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BookController : ControllerBase
+    public class BooksController : ControllerBase
     {
         // GET api/values
         [HttpGet]
@@ -84,6 +84,13 @@ namespace BookStore.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Book> Commentary(int id)
+
+        {
+            return null;
         }
     }
 }

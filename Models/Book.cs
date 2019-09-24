@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace BookStore.Models
 {
@@ -13,5 +14,7 @@ namespace BookStore.Models
         public long Count { get; set; }
 
           public double Price { get; set; }
+
+          public List<Commentary> Commentary {get;set;}
     }
 }
