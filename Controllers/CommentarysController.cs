@@ -15,25 +15,20 @@ namespace BookStore.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Commentary>> Get()
         {
-            return null;
-        }
-
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<Commentary> Get(int id)
-        {
-            return null;
-        }
+            return DataFake.Commentary();
+        }      
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public void Post([FromBody] Commentary commentary)
         {
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Commentary commentary)
         {
         }
 

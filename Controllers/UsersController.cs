@@ -30,14 +30,16 @@ namespace BookStore.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public void Post([FromBody] User user)
         {
 
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] User user)
         {
             
         }
@@ -48,5 +50,25 @@ namespace BookStore.Controllers
         {
             
         }
+
+        [HttpGet("{id}/order")]    
+        public ActionResult<IEnumerable<Order>> Order([FromQuery] int id)
+        {
+              return DataFake.Order().Where(x=> x.IdClient == id).ToList();            
+        }
+
+        [HttpGet("{id}/shoppingcar")]    
+        public ActionResult<IEnumerable<ShoppingCar>> ShoppingCar([FromQuery] int id)
+        {
+              return DataFake.ShoppingCar().Where(x=> x.IdClient == id).ToList();            
+        }
+
+           [HttpGet("{id}/commentary")]    
+        public ActionResult<IEnumerable<Commentary>> Commentary([FromRoute] int id)
+        {
+            
+            return DataFake.Commentarys().Where(x=> x.idUser == id).ToList();
+        }
+
     }
 }

@@ -180,5 +180,51 @@ using System.Collections.Generic;
 
             return order;
         }
+
+        public static List<ShoppingCar> ShoppingCar()
+        {
+            List<ShoppingCar> shoppingCar = new List<ShoppingCar>();
+
+            var shoppingCar1 = new ShoppingCar()
+            {
+                Id =1,
+                IdClient = 1,
+                IdBook = 1,
+                Count = 2,
+                Price = 19.98                
+            };
+
+             var shoppingCar2 = new ShoppingCar()
+            {
+                Id =2,
+                IdClient =1 ,
+                IdBook = 3,
+                Count = 1,
+                Price = 29.99                
+            };
+             var shoppingCar3 = new ShoppingCar()
+            {
+                Id =3,
+                IdClient = 2,
+                IdBook = 4,
+                Count = 2,
+                Price = 39.98                    
+            };
+             var shoppingCar4 = new ShoppingCar()
+            {
+                Id =4,
+                IdClient = 3,
+                IdBook = 2,
+                Count = 1,
+                Price = 49.99                
+            };
+
+            shoppingCar.Add(shoppingCar1);
+            shoppingCar.Add(shoppingCar2);
+            shoppingCar.Add(shoppingCar3);
+            shoppingCar.Add(shoppingCar4);
+
+            return shoppingCar;
+        }
     
 }

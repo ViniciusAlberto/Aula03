@@ -17,19 +17,21 @@ namespace BookStore.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<ShoppingCar>> Get()
         {
-            return null;
+            return DataFake.ShoppingCar();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult<ShoppingCar> Get(int id)
         {
-            return null;
+            return DataFake.ShoppingCar().Where(x=> x.Id == id).FirstOrDefault();
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] ShoppingCar shoppingCar)
         {
         }
 
