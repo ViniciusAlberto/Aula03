@@ -49,5 +49,18 @@ namespace BookStore.Controllers
             
             return DataFake.Commentarys().Where(x=> x.IdBook == id).ToList();
         }
+
+        [HttpGet("{id}/order")]    
+        public ActionResult<IEnumerable<Order>> Order([FromRoute] int id)
+        {            
+            return DataFake.Commentarys().Where(x=> x.IdBook == id).ToList();
+        }
+
+        [HttpGet("Genre/{genre}")]    
+        
+        public ActionResult<IEnumerable<Book>> Genre([FromRoute] string genre)
+        {            
+            return DataFake.Book().Where(x=> x.Genre == genre).ToList();
+        }
     }
 }
