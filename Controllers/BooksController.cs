@@ -15,57 +15,14 @@ namespace BookStore.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Book>> Get()
         {
-            return new Book[] {
-            new Book(){
-                Id=1,
-                Title = "Livro 1",
-                Genre = "Fiction",
-                DatePublish = DateTime.Now.AddYears(-9),
-                Count = 10,
-                Price = 20.35
-            },
-            new Book(){
-                Id=2,
-                Title = "Livro 2",
-                Genre = "Computing",
-                DatePublish = DateTime.Now.AddYears(-2),
-                Count = 35,
-                Price = 49.99
-            }};
+            return DataFake.Books();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<Book> Get(int id)
         {
-            if( id.Equals(1))
-            {
-             return new Book(){
-                Id=1,
-                Title = "Livro 1",
-                Genre = "Fiction",
-                DatePublish = DateTime.Now.AddYears(-9),
-                Count = 10,
-                Price = 20.35
-             };
-            }
-            else
-            if(id.Equals(2))
-            {
-               return  new Book(){
-                Id=2,
-                Title = "Livro 2",
-                Genre = "Computing",
-                DatePublish = DateTime.Now.AddYears(-2),
-                Count = 35,
-                Price = 49.99
-             };     
-
-            }
-            else
-            {
-                return null;
-            }
+            return DataFake.Books().Where(x=> x.Id == id).FirstOrDefault();
         }
 
         // POST api/values
@@ -86,11 +43,11 @@ namespace BookStore.Controllers
         {
         }
 
-        [HttpGet("{id}")]
-        public ActionResult<Book> Commentary(int id)
-
+        [HttpGet("{id}/commentary")]    
+        public ActionResult<IEnumerable<Commentary>> Commentary([FromRoute] int id)
         {
-            return null;
+            
+            return DataFake.Commentarys().Where(x=> x.IdBook == id).ToList();
         }
     }
 }

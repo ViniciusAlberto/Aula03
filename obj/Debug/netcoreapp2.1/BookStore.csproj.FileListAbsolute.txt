@@ -1,14 +1,28 @@
-C:\Users\Vinicius Oliveira\Documents\BookStore\bin\Debug\netcoreapp2.1\BookStore.deps.json
-C:\Users\Vinicius Oliveira\Documents\BookStore\bin\Debug\netcoreapp2.1\BookStore.runtimeconfig.json
-C:\Users\Vinicius Oliveira\Documents\BookStore\bin\Debug\netcoreapp2.1\BookStore.runtimeconfig.dev.json
-c:\Users\Vinicius Oliveira\Documents\BookStore\bin\Debug\netcoreapp2.1\BookStore.dll
-c:\Users\Vinicius Oliveira\Documents\BookStore\bin\Debug\netcoreapp2.1\BookStore.pdb
-c:\Users\Vinicius Oliveira\Documents\BookStore\obj\Debug\netcoreapp2.1\BookStore.csprojAssemblyReference.cache
-c:\Users\Vinicius Oliveira\Documents\BookStore\obj\Debug\netcoreapp2.1\BookStore.csproj.CoreCompileInputs.cache
-c:\Users\Vinicius Oliveira\Documents\BookStore\obj\Debug\netcoreapp2.1\BookStore.RazorAssemblyInfo.cache
-c:\Users\Vinicius Oliveira\Documents\BookStore\obj\Debug\netcoreapp2.1\BookStore.RazorAssemblyInfo.cs
-c:\Users\Vinicius Oliveira\Documents\BookStore\obj\Debug\netcoreapp2.1\BookStore.AssemblyInfoInputs.cache
-c:\Users\Vinicius Oliveira\Documents\BookStore\obj\Debug\netcoreapp2.1\BookStore.AssemblyInfo.cs
-c:\Users\Vinicius Oliveira\Documents\BookStore\obj\Debug\netcoreapp2.1\BookStore.RazorTargetAssemblyInfo.cache
-c:\Users\Vinicius Oliveira\Documents\BookStore\obj\Debug\netcoreapp2.1\BookStore.dll
-c:\Users\Vinicius Oliveira\Documents\BookStore\obj\Debug\netcoreapp2.1\BookStore.pdb
+C:/Users/Vinicius Oliveira/Documents/BookStore/bin/Debug/netcoreapp2.1/BookStore.deps.json
+C:/Users/Vinicius Oliveira/Documents/BookStore/bin/Debug/netcoreapp2.1/BookStore.runtimeconfig.json
+C:/Users/Vinicius Oliveira/Documents/BookStore/bin/Debug/netcoreapp2.1/BookStore.runtimeconfig.dev.json
+c:/Users/Vinicius Oliveira/Documents/BookStore/bin/Debug/netcoreapp2.1/BookStore.dll
+c:/Users/Vinicius Oliveira/Documents/BookStore/bin/Debug/netcoreapp2.1/BookStore.pdb
+c:/Users/Vinicius Oliveira/Documents/BookStore/obj/Debug/netcoreapp2.1/BookStore.csprojAssemblyReference.cache
+c:/Users/Vinicius Oliveira/Documents/BookStore/obj/Debug/netcoreapp2.1/BookStore.csproj.CoreCompileInputs.cache
+c:/Users/Vinicius Oliveira/Documents/BookStore/obj/Debug/netcoreapp2.1/BookStore.RazorAssemblyInfo.cache
+c:/Users/Vinicius Oliveira/Documents/BookStore/obj/Debug/netcoreapp2.1/BookStore.RazorAssemblyInfo.cs
+c:/Users/Vinicius Oliveira/Documents/BookStore/obj/Debug/netcoreapp2.1/BookStore.AssemblyInfoInputs.cache
+c:/Users/Vinicius Oliveira/Documents/BookStore/obj/Debug/netcoreapp2.1/BookStore.AssemblyInfo.cs
+c:/Users/Vinicius Oliveira/Documents/BookStore/obj/Debug/netcoreapp2.1/BookStore.RazorTargetAssemblyInfo.cache
+c:/Users/Vinicius Oliveira/Documents/BookStore/obj/Debug/netcoreapp2.1/BookStore.dll
+c:/Users/Vinicius Oliveira/Documents/BookStore/obj/Debug/netcoreapp2.1/BookStore.pdb
+/home/devdevil/Documentos/Aula03/obj/Debug/netcoreapp2.1/BookStore.csprojAssemblyReference.cache
+/home/devdevil/Documentos/Aula03/obj/Debug/netcoreapp2.1/BookStore.csproj.CoreCompileInputs.cache
+/home/devdevil/Documentos/Aula03/obj/Debug/netcoreapp2.1/BookStore.RazorAssemblyInfo.cache
+/home/devdevil/Documentos/Aula03/obj/Debug/netcoreapp2.1/BookStore.RazorAssemblyInfo.cs
+/home/devdevil/Documentos/Aula03/obj/Debug/netcoreapp2.1/BookStore.AssemblyInfoInputs.cache
+/home/devdevil/Documentos/Aula03/obj/Debug/netcoreapp2.1/BookStore.AssemblyInfo.cs
+/home/devdevil/Documentos/Aula03/obj/Debug/netcoreapp2.1/BookStore.dll
+/home/devdevil/Documentos/Aula03/obj/Debug/netcoreapp2.1/BookStore.pdb
+/home/devdevil/Documentos/Aula03/bin/Debug/netcoreapp2.1/BookStore.deps.json
+/home/devdevil/Documentos/Aula03/bin/Debug/netcoreapp2.1/BookStore.runtimeconfig.json
+/home/devdevil/Documentos/Aula03/bin/Debug/netcoreapp2.1/BookStore.runtimeconfig.dev.json
+/home/devdevil/Documentos/Aula03/bin/Debug/netcoreapp2.1/BookStore.dll
+/home/devdevil/Documentos/Aula03/bin/Debug/netcoreapp2.1/BookStore.pdb
+/home/devdevil/Documentos/Aula03/obj/Debug/netcoreapp2.1/BookStore.RazorTargetAssemblyInfo.cache
