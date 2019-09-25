@@ -15,6 +15,6 @@ namespace BookStore.Models
 
           public double Price { get; set; }
 
-          public List<Commentary> Commentary {get;set;}
+     
     }
 }

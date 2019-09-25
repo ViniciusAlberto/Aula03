@@ -11,55 +11,35 @@ namespace BookStore.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
+        
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<User>> Get()
         {
-            return new User[] { new User(){
-                Id =1,
-                Name = "Vinicius Alberto"
-            },
-            new User(){
-                Id =2,
-                Name= "João Maria"
-            } };
+                
+
+            return DataFake.Users();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<User> Get(int id)
         {
-            if(id.Equals(1)){
-              return  new User(){
-                Id =1,
-                Name = "Vinicius Alberto"
-               };
-            }
-            else
-             if(id.Equals(2))
-                {
-                    return new User(){
-                         Id =2,
-                         Name= "João Maria"
-                     };  
-                }            
-            else
-            {
-                return null;
-            }
-            
+              return DataFake.Users().Where(x=> x.Id == id).FirstOrDefault();            
         }
 
         // POST api/values
         [HttpPost]
         public void Post([FromBody] string value)
         {
+
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
+            
         }
 
         // DELETE api/values/5
