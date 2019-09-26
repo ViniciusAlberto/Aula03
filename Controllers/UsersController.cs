@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using BookStore.Models;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace BookStore.Controllers
 {
     [Route("api/[controller]")]
@@ -30,8 +31,8 @@ namespace BookStore.Controllers
 
         // POST api/values
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+     
+      
         public void Post([FromBody] User user)
         {
 
@@ -54,20 +55,20 @@ namespace BookStore.Controllers
         [HttpGet("{id}/order")]    
         public ActionResult<IEnumerable<Order>> Order([FromQuery] int id)
         {
-              return DataFake.Order().Where(x=> x.IdClient == id).ToList();            
+              return DataFake.Orders().Where(x=> x.IdUser == id).ToList();            
         }
 
         [HttpGet("{id}/shoppingcar")]    
         public ActionResult<IEnumerable<ShoppingCar>> ShoppingCar([FromQuery] int id)
         {
-              return DataFake.ShoppingCar().Where(x=> x.IdClient == id).ToList();            
+              return DataFake.ShoppingCar().Where(x=> x.IdUser == id).ToList();            
         }
 
            [HttpGet("{id}/commentary")]    
         public ActionResult<IEnumerable<Commentary>> Commentary([FromRoute] int id)
         {
             
-            return DataFake.Commentarys().Where(x=> x.idUser == id).ToList();
+            return DataFake.Commentarys().Where(x=> x.IdUser == id).ToList();
         }
 
     }

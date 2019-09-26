@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BookStore.Models;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BooksController : ControllerBase
+    public class BooksController : Controller
     {
         // GET api/values
         [HttpGet]
+        [Route("/")]
         public ActionResult<IEnumerable<Book>> Get()
         {
             return DataFake.Books();
@@ -27,8 +29,7 @@ namespace BookStore.Controllers
 
         // POST api/values
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+     
         public void Post([FromBody] Book book)
         {
         }
@@ -55,14 +56,14 @@ namespace BookStore.Controllers
         [HttpGet("{id}/order")]    
         public ActionResult<IEnumerable<Order>> Order([FromRoute] int id)
         {            
-            return DataFake.Commentarys().Where(x=> x.IdBook == id).ToList();
+            return DataFake.Orders().Where(x=> x.IdBook == id).ToList();
         }
 
         [HttpGet("Genre/{genre}")]   
         
         public ActionResult<IEnumerable<Book>> Genre([FromRoute] string genre)
         {            
-            return DataFake.Book().Where(x=> x.Genre == genre).ToList();
+            return DataFake.Books().Where(x=> x.Genre == genre).ToList();
         }
     }
 }

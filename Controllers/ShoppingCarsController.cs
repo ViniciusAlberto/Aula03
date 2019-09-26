@@ -22,8 +22,7 @@ namespace BookStore.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+   
         public ActionResult<ShoppingCar> Get(int id)
         {
             return DataFake.ShoppingCar().Where(x=> x.Id == id).FirstOrDefault();

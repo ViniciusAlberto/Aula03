@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\valberto.ALMAVIVA\\Documents\\Pos\\Aula03\\BookStore.csproj": {}
+    "C:\\Users\\Vinicius Oliveira\\Documents\\BookStore\\BookStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\valberto.ALMAVIVA\\Documents\\Pos\\Aula03\\BookStore.csproj": {
+    "C:\\Users\\Vinicius Oliveira\\Documents\\BookStore\\BookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\valberto.ALMAVIVA\\Documents\\Pos\\Aula03\\BookStore.csproj",
+        "projectUniqueName": "C:\\Users\\Vinicius Oliveira\\Documents\\BookStore\\BookStore.csproj",
         "projectName": "BookStore",
-        "projectPath": "C:\\Users\\valberto.ALMAVIVA\\Documents\\Pos\\Aula03\\BookStore.csproj",
-        "packagesPath": "C:\\Users\\valberto.ALMAVIVA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\valberto.ALMAVIVA\\Documents\\Pos\\Aula03\\obj\\",
+        "projectPath": "C:\\Users\\Vinicius Oliveira\\Documents\\BookStore\\BookStore.csproj",
+        "packagesPath": "C:\\Users\\Vinicius Oliveira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vinicius Oliveira\\Documents\\BookStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\valberto.ALMAVIVA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vinicius Oliveira\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -53,7 +53,6 @@
               "version": "[2.1.2, )"
             },
             "Microsoft.NETCore.App": {
-              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using BookStore.Models;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace BookStore.Controllers
 {
     [Route("api/[controller]")]
@@ -13,22 +14,21 @@ namespace BookStore.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<Order>> Get()
         {
-            return DataFake.Order();
+            return DataFake.Orders();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<Order> Get(int id)
         {
-              return DataFake.Order().Where(x=> x.Id == id).FirstOrDefault();
+            return DataFake.Orders().Where(x => x.Id == id).FirstOrDefault();
         }
 
         // POST api/values
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    
         public void Post([FromBody] Order order)
         {
         }
@@ -43,45 +43,47 @@ namespace BookStore.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            
+
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<Order>> New()
         {
 
-           return DataFake.Order().Where(x=> x.IdStatus == (long)DataFake.OrderStatus.New).ToList();
+            return DataFake.Orders().Where(x => x.IdStatus == (long)DataFake.OrderStatus.New).ToList();
         }
 
-         [HttpGet]
+        [HttpGet]
         public ActionResult<IEnumerable<Order>> Delivered()
         {
 
-           return DataFake.Order().Where(x=> x.IdStatus == (long)DataFake.OrderStatus.Delivered).ToList();
+            return DataFake.Orders().Where(x => x.IdStatus == (long)DataFake.OrderStatus.Delivered).ToList();
         }
 
-          public ActionResult<IEnumerable<Order>> Canceled()
+        [HttpGet]
+        public ActionResult<IEnumerable<Order>> Canceled()
         {
 
-           return DataFake.Order().Where(x=> x.IdStatus == (long)DataFake.OrderStatus.Canceled).ToList();
+            return DataFake.Orders().Where(x => x.IdStatus == (long)DataFake.OrderStatus.Canceled).ToList();
         }
-
-         public ActionResult<IEnumerable<Order>> Approved()
+        [HttpGet("/Approved")]
+        public ActionResult<IEnumerable<Order>> Approved()
         {
+            long IdStatus = (long)DataFake.OrderStatus.Approved;
 
-           return DataFake.Order().Where(x=> x.IdStatus == (long)DataFake.OrderStatus.New).ToList();
+            return DataFake.Orders().Where(x => x.IdStatus == 5 ).ToList();
         }
-        
-         public ActionResult<IEnumerable<Order>> AwaitingPayment()
+        [HttpGet]
+        public ActionResult<IEnumerable<Order>> AwaitingPayment()
         {
-           return DataFake.Order().Where(x=> x.IdStatus == (long)DataFake.OrderStatus.AwaitingPayment).ToList();
+            return DataFake.Orders().Where(x => x.IdStatus == (long)DataFake.OrderStatus.AwaitingPayment).ToList();
         }
 
-        [HttpGet("{id}/status")]    
-        public ActionResult<int> Status([FromRoute] int id)
-        {            
-            return DataFake.Order().Where(x=> x.IdBook == id).FirstOrDefault().IdStatus;
+        [HttpGet("{id}/status")]
+        public ActionResult<long> Status([FromRoute] int id)
+        {
+            return DataFake.Orders().Where(x => x.Id == id).FirstOrDefault().IdStatus;
         }
-     
+
     }
 }

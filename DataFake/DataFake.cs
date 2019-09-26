@@ -4,7 +4,7 @@ using BookStore.Models;
 using System.Collections.Generic;
     public static class DataFake
     {
-        enum OrderStatus { Paid = 1, New = 2 , Delivered = 3, Canceled = 4, Approved = 5 , AwaitingPayment= 6 };
+        public enum OrderStatus { Paid = 1, New = 2 , Delivered = 3, Canceled = 4, Approved = 5 , AwaitingPayment= 6 };
         public static List<Book> Books ()
         {
             List<Book> book = new List<Book>();
@@ -65,28 +65,28 @@ using System.Collections.Generic;
             {
                 IdBook = 1,
                 Description = "Otimo Livro",
-                IdUsuario = 1,
+                IdUser = 1,
                 DateCommentary = DateTime.Now.AddDays(-9)                 
             };
             var commentary2 = new Commentary()
             {
                 IdBook = 2,
                 Description = "Excelente custo beneficios Livro",
-                IdUsuario = 1,
+                IdUser = 1,
                 DateCommentary = DateTime.Now.AddDays(-1)                 
             };
             var commentary3 = new Commentary()
             {
                 IdBook = 3,
                 Description = "Pessimo Livro",
-                IdUsuario = 2,
+                IdUser = 2,
                 DateCommentary = DateTime.Now                 
             };
             var commentary4 = new Commentary()
             {
                 IdBook = 2,
                 Description = "Bom Livro",
-                IdUsuario = 3,
+                IdUser = 3,
                 DateCommentary = DateTime.Now.AddDays(-30)                 
             };
 
@@ -138,7 +138,7 @@ using System.Collections.Generic;
             var order1 = new Order()
             {
                 Id =1,
-                IdClient = 1,
+                IdUser = 1,
                 IdBook = 1,
                 Count = 2,
                 Price = 19.98,
@@ -148,7 +148,7 @@ using System.Collections.Generic;
              var order2 = new Order()
             {
                 Id =2,
-                IdClient =1 ,
+                IdUser =1 ,
                 IdBook = 3,
                 Count = 1,
                 Price = 29.99,
@@ -157,7 +157,7 @@ using System.Collections.Generic;
              var order3 = new Order()
             {
                 Id =3,
-                IdClient = 2,
+                IdUser = 2,
                 IdBook = 4,
                 Count = 2,
                 Price = 39.98,
@@ -166,7 +166,7 @@ using System.Collections.Generic;
              var order4 = new Order()
             {
                 Id =4,
-                IdClient = 3,
+                IdUser = 3,
                 IdBook = 2,
                 Count = 1,
                 Price = 49.99,
@@ -188,7 +188,7 @@ using System.Collections.Generic;
             var shoppingCar1 = new ShoppingCar()
             {
                 Id =1,
-                IdClient = 1,
+                IdUser = 1,
                 IdBook = 1,
                 Count = 2,
                 Price = 19.98                
@@ -197,7 +197,7 @@ using System.Collections.Generic;
              var shoppingCar2 = new ShoppingCar()
             {
                 Id =2,
-                IdClient =1 ,
+                IdUser =1 ,
                 IdBook = 3,
                 Count = 1,
                 Price = 29.99                
@@ -205,7 +205,7 @@ using System.Collections.Generic;
              var shoppingCar3 = new ShoppingCar()
             {
                 Id =3,
-                IdClient = 2,
+                IdUser = 2,
                 IdBook = 4,
                 Count = 2,
                 Price = 39.98                    
@@ -213,7 +213,7 @@ using System.Collections.Generic;
              var shoppingCar4 = new ShoppingCar()
             {
                 Id =4,
-                IdClient = 3,
+                IdUser = 3,
                 IdBook = 2,
                 Count = 1,
                 Price = 49.99                

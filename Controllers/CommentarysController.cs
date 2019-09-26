@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BookStore.Models;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.Controllers
@@ -15,13 +16,13 @@ namespace BookStore.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Commentary>> Get()
         {
-            return DataFake.Commentary();
+            return DataFake.Commentarys();
         }      
 
         // POST api/values
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+     
+
         public void Post([FromBody] Commentary commentary)
         {
         }

@@ -12,7 +12,7 @@ namespace BookStore.Models
 
         public double Price { get; set; }
        
-        public long IdClient { get; set; }
+        public long IdUser { get; set; }
  
         public long IdStatus { get; set; }
        

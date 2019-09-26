@@ -9,7 +9,7 @@ namespace BookStore.Models
  
       public long IdBook { get; set; }
       
-        public long IdShoppingCar { get; set; }
+        public long IdUser { get; set; }
 
        
     }
