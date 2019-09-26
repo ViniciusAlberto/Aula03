@@ -14,7 +14,7 @@ namespace BookStore.Controllers
     {
         // GET api/values
         [HttpGet]
-        [Route("/")]
+     
         public ActionResult<IEnumerable<Book>> Get()
         {
             return DataFake.Books();

@@ -46,34 +46,32 @@ namespace BookStore.Controllers
 
         }
 
-        [HttpGet]
+         [HttpGet("New")]
         public ActionResult<IEnumerable<Order>> New()
         {
 
             return DataFake.Orders().Where(x => x.IdStatus == (long)DataFake.OrderStatus.New).ToList();
         }
 
-        [HttpGet]
+          [HttpGet("Delivered")]
         public ActionResult<IEnumerable<Order>> Delivered()
         {
 
             return DataFake.Orders().Where(x => x.IdStatus == (long)DataFake.OrderStatus.Delivered).ToList();
         }
 
-        [HttpGet]
+        [HttpGet("Canceled")]
         public ActionResult<IEnumerable<Order>> Canceled()
         {
 
             return DataFake.Orders().Where(x => x.IdStatus == (long)DataFake.OrderStatus.Canceled).ToList();
         }
-        [HttpGet("/Approved")]
+        [HttpGet("Approved")]
         public ActionResult<IEnumerable<Order>> Approved()
-        {
-            long IdStatus = (long)DataFake.OrderStatus.Approved;
-
-            return DataFake.Orders().Where(x => x.IdStatus == 5 ).ToList();
+        {         
+            return DataFake.Orders().Where(x => x.IdStatus == (long)DataFake.OrderStatus.Approved).ToList();
         }
-        [HttpGet]
+        [HttpGet("AwaitingPayment")]
         public ActionResult<IEnumerable<Order>> AwaitingPayment()
         {
             return DataFake.Orders().Where(x => x.IdStatus == (long)DataFake.OrderStatus.AwaitingPayment).ToList();
